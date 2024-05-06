@@ -1,0 +1,65 @@
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  top: 0;
+  position: fixed;
+  left: 0;
+}
+
+.content {
+  background-color: #003f62;
+  display: flex;
+  width: 100%;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  font-family: "FiraCode Bold";
+  font-size: 20px;
+  padding: 0 20px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-button {
+  display: flex;
+  height: 40px;
+  font-family: "Poppins Regular";
+  font-size: 14px;
+}
+
+.input-button input {
+  border-radius: 12px;
+  border: solid 1px #fff;
+  padding: 10px;
+}
+
+.input-button button {
+  border-radius: 12px;
+  padding: 10px;
+  border: solid 1px #eda415;
+  background-color: #eda415;
+  color: white;
+}
+
+.right {
+  display: flex;
+  gap: 29px;
+  padding: 0 20px;
+  font-family: "Poppins Regular";
+  font-size: 16px;
+}
+
+.cart {
+  display: flex;
+  gap: 10px;
+}
+
+.like {
+  display: flex;
+  gap: 10px;
+}

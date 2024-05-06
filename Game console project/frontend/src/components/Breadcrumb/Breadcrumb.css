@@ -1,0 +1,26 @@
+.breadcrumb{
+    display: flex;
+    width: 100%;
+    font-family: "Poppins Medium";
+    background-color: #F4F4F4;
+}
+
+.breadcrumb-content{
+    display: flex;
+    gap: 98px;
+    margin-left: 98px;
+    width: 100%;
+}
+
+.breadcrumb-left{
+    color: white;
+    background-color: #EDA415;
+    padding: 0 14px;
+}
+
+.breadcrumb-mid{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+

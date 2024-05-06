@@ -1,0 +1,31 @@
+.product{
+    display: flex;
+    width: 300px;
+    border: solid 1px #B6B6B6;
+    border-radius: 20px;
+    flex-direction: column;
+    margin: 50px 98px;
+}
+
+.product-content{
+    display: flex;
+    padding: 20px;
+}
+
+.image{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.title{
+    color: #003F62;
+    font-family: 'Poppins Medium';
+    padding: 0 20px;
+}
+
+.price{
+    color: #4A4A4A;
+    font-family: 'Poppins SemiBold';
+    padding: 0 20px;
+}

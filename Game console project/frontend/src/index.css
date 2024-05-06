@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "FiraCode Light";
+  src: url("../public/font//FiraCode-Light.ttf");
+}
+
+@font-face {
+  font-family: "FiraCode Medium";
+  src: url("../public/font//FiraCode-Medium.ttf");
+}
+
+@font-face {
+  font-family: "FiraCode Regular";
+  src: url("../public/font//FiraCode-Regular.ttf");
+}
+
+@font-face {
+  font-family: "FiraCode SemiBold";
+  src: url("../public/font//FiraCode-Bold.ttf");
+}
+
+@font-face {
+  font-family: "FiraCode Bold";
+  src: url("../public/font//FiraCode-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Regular";
+  src: url("../public/font//Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("../public/font//Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Extra Bold";
+  src: url("../public/font//Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  src: url("../public/font//Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins SemiBold";
+  src: url("../public/font//Poppins-SemiBold.ttf");
+}
