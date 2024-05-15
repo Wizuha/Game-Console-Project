@@ -10,7 +10,7 @@ export default function Breadcrumb() {
         </div>
         <div className="breadcrumb-mid">
           <p>Home</p>
-          <p>Catalog</p>
+          <p>Catalogue</p>
           <p>Blog</p>
           <p>Pages</p>
           <p>About us</p>

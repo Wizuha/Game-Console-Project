@@ -4,8 +4,10 @@ import './product.css'
 
 export default function Products() {
   return (
-    <div>
-        <Product  />
+    <div className="page-product">
+      <div className="console">
+        <Product />
+      </div>
     </div>
-  )
+  );
 }
