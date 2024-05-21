@@ -1,0 +1,32 @@
+.bottom{
+    display: flex;
+    width: 100vw;
+    height: 511px;
+    background-color: #E2F4FF;
+    justify-content: center;
+    left: 0;
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 139px;
+    width: 1320px;
+    gap: 150px;
+    background-color: white;
+    margin-top: 42px ;
+    border-radius: 20px;
+}
+
+.text-subscribe{
+  font-family: "Poppins Bold";
+  color: #1B5A7D;
+}
+
+.call{
+    display: flex;
+    font-family: 'Poppins Semibold';
+    gap: 20px;
+    color: #606060;
+}

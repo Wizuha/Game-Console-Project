@@ -3,6 +3,8 @@
     width: 100%;
     font-family: "Poppins Medium";
     background-color: #F4F4F4;
+    position: fixed;
+    left: 0;
 }
 
 .breadcrumb-content{
