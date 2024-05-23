@@ -1,10 +1,12 @@
 .bottom{
     display: flex;
     width: 100vw;
-    height: 511px;
-    background-color: #E2F4FF;
+    height: 500px;
+    background-color: #003f62;
     justify-content: center;
+    align-items: center;
     left: 0;
+    flex-direction: column;
 }
 
 .subscribe {
@@ -24,9 +26,107 @@
   color: #1B5A7D;
 }
 
+.input-subscribe{
+    display: flex;
+}
+
+.input-subscribe img{
+    color: black ;
+}
+
+.input-subscribe input{
+    display: flex;
+    height: 23px;
+    background-color: #EDA415;
+    font-family: 'Poppins Semibold';
+    color: white;
+    padding: 9px 13px;
+    border-radius: 10px;
+    border: hidden;
+}
+
+
 .call{
     display: flex;
     font-family: 'Poppins Semibold';
     gap: 20px;
     color: #606060;
+    align-items: center;
 }
+
+.foot-bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    width: 1490px;
+    justify-content: space-between;
+}
+
+.left-bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-site{
+    display: flex;
+    gap: 10px;
+    color: white;
+    align-items: center;
+    font-size: 23px;
+    font-family: "FiraCode Bold";
+}
+
+.adress {
+    font-size: 18px;
+    font-family: 'Poppins Regular';
+    color: white;
+}
+
+.mid-left-bottom{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.mid-left-bottom p{
+    font-family: 'Poppins SemiBold';
+    font-size: 20px;
+}
+
+.mid-left-bottom li{
+    font-family: 'Poppins Regular';
+    font-size: 19px;
+}
+
+.mid-right-bottom{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.mid-right-bottom p{
+    font-family: 'Poppins SemiBold';
+    font-size: 20px;
+}
+
+.mid-right-bottom li{
+    font-family: 'Poppins Regular';
+    font-size: 19px;
+}
+
+.right-bottom{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.right-bottom p{
+    font-family: 'Poppins SemiBold';
+    font-size: 20px;
+}
+
+.right-bottom li{
+    font-family: 'Poppins Regular';
+    font-size: 19px;
+}
+
