@@ -3,7 +3,7 @@
     width: 100%;
     font-family: "Poppins Medium";
     background-color: #F4F4F4;
-    position: fixed;
+    position: sticky;
     left: 0;
 }
 
@@ -25,4 +25,11 @@
     gap: 50px;
     justify-content: center;
 }
+
+@media screen and (max-width: 1070px)   {
+    .breadcrumb{
+        display: none
+    }    
+}
+
 

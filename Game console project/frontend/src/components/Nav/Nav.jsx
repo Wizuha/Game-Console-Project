@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Nav.css";
 
 export default function Nav() {
+  const [view,setView] = useState(false);
   return (
     <nav className="nav">
       <div className="content">
@@ -10,8 +11,8 @@ export default function Nav() {
           <p>Game Center</p>
         </div>
         <div className="input-button">
+          <label for="submit"></label>
           <input type="text" name="search" placeholder="Search console" />
-          <button>Search</button>
         </div>
         <div className="right">
           <div className="cart">
@@ -22,6 +23,10 @@ export default function Nav() {
             <img src="heart.svg" />
             <p>Like</p>
           </div>
+        </div>
+        <div className="navbar-mobile">
+          <div className="line1"></div>
+          <div className="line2"></div>
         </div>
       </div>
     </nav>
