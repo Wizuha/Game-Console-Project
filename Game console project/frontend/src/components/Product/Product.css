@@ -33,3 +33,10 @@
     color: #4A4A4A;
     font-family: 'Poppins SemiBold';
 }
+
+@media screen and (max-width: 1070px)   {
+    .console-product{
+        margin-top: 0;
+    }
+    
+}
