@@ -11,11 +11,17 @@
 }
 .product{
     display: flex;
-    width: 300px;
+    width: 13%;
     border: solid 1px #B6B6B6;
     border-radius: 20px;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 20px 20px;
+}
+
+.title-price{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .image{
@@ -29,14 +35,47 @@
     font-family: 'Poppins Medium';
 }
 
+.description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 15px;
+}
+
+.description::after {
+    content: "..."; /* Ajoutez les trois points à la fin */
+}
+
 .price{
     color: #4A4A4A;
     font-family: 'Poppins SemiBold';
 }
 
 @media screen and (max-width: 1070px)   {
+    .product{
+        display: flex;
+        width: 70%;
+        flex-direction: row;
+    }
+
+    .product-item{
+        display: flex;
+    }
+
+    .title-price{
+        display: flex;
+        width: 50%;
+        align-items: center;
+    }
+
+    .image{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .console-product{
-        margin-top: 0;
+        margin-top: 10%;
     }
     
 }

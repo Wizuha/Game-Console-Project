@@ -7,7 +7,7 @@ export default function Layout({children}) {
   return (
     <div>
       <Nav  />
-      <div className='layout-div' style = {{marginTop : "66px", }}>
+      <div className='layout-div'>
         {children}
       </div>
       <Bottom />

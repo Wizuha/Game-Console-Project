@@ -20,7 +20,8 @@ return (
                         <img src='logo192.png' alt='Product' />
                     </div>
                     <div className='title-price'>
-                        <p className='title'>{product.name}</p> 
+                        <p className='title'>{product.name}</p>
+                        <p className='description'>{product.description}</p> 
                         <p className='price'>{product.price}€</p> 
                     </div>
                 </div>

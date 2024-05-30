@@ -4,7 +4,7 @@
     font-family: "Poppins Medium";
     background-color: #F4F4F4;
     position: sticky;
-    left: 0;
+    height: 6vh;
 }
 
 .breadcrumb-content{
@@ -15,14 +15,19 @@
 }
 
 .breadcrumb-left{
+    display: flex;
     color: white;
     background-color: #EDA415;
     padding: 0 14px;
+    align-items: center;
+    justify-content: center;
 }
 
 .breadcrumb-mid{
     display: flex;
     gap: 50px;
+    justify-content: center;
+    align-items: center;
     justify-content: center;
 }
 

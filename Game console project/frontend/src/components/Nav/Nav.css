@@ -2,9 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  top: 0;
   position: sticky;
-  left: 0;
 }
 
 .content {
@@ -14,6 +12,7 @@
   color: white;
   justify-content: space-between;
   align-items: center;
+  height: 8vh;
 }
 
 .left {
@@ -57,11 +56,13 @@
 .cart {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .like {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .navbar-mobile {
@@ -83,6 +84,7 @@
         justify-content: flex-start;
         gap: 10px;
         cursor: pointer;
+        padding: 0 20px;
     }
     .navbar-mobile .line1 {
         width: 30px;
