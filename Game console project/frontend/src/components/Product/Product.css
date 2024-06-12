@@ -1,81 +1,96 @@
-.console-product{
-    display: flex;
-    justify-items: center;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    margin-top: 60px;
-    gap : 20px;
-    justify-content: center;
-
+.console-product {
+  display: flex;
+  justify-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin: 80px 0;
+  gap: 60px;
+  justify-content: center;
 }
-.product{
-    display: flex;
-    width: 13%;
-    border: solid 1px #B6B6B6;
-    border-radius: 20px;
-    flex-direction: column;
-    padding: 20px 20px;
-}
-
-.title-price{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.product {
+  display: flex;
+  width: 19%;
+  border: solid 1px #b6b6b6;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 20px 20px;
 }
 
-.image{
-    display: flex;
-    width: 100%;
-    justify-content: center;
+.title-price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.title{
-    color: #003F62;
-    font-family: 'Poppins Medium';
+.image {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
-.description{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-height: 15px;
+.title {
+  color: #003f62;
+  font-family: "Poppins Medium";
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  max-height: calc(1em*1);
+  line-height: 1em;
+  overflow: hidden;
 }
 
 .description::after {
-    content: "..."; /* Ajoutez les trois points à la fin */
+  content: "...";
+  position: absolute;
+  background: white;
 }
 
-.price{
-    color: #4A4A4A;
-    font-family: 'Poppins SemiBold';
+.price {
+  color: #4a4a4a;
+  font-family: "Poppins SemiBold";
 }
 
-@media screen and (max-width: 1070px)   {
-    .product{
-        display: flex;
-        width: 70%;
-        flex-direction: row;
-    }
 
-    .product-item{
-        display: flex;
-    }
+.star{
+    cursor: pointer;
+}
 
-    .title-price{
-        display: flex;
-        width: 50%;
-        align-items: center;
-    }
+input[type=radio]{
+    display: none;
+}
 
-    .image{
-        display: flex;
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .console-product{
-        margin-top: 10%;
-    }
-    
+@media screen and (max-width: 1070px) {
+  .product {
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+  }
+
+  .product-item {
+    display: flex;
+  }
+
+  .title-price {
+    display: flex;
+    width: 50%;
+    align-items: center;
+  }
+
+  .image {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .console-product {
+    margin-top: 10%;
+  }
 }
