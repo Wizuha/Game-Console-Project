@@ -7,12 +7,18 @@ export default function Product() {
   const [products, setProducts] = useState([]);
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
+  
   useEffect(() => {
     fetch("http://localhost:8000/")
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching product", error));
   }, []);
+
+  const ciblingProduct = (id) => {
+    
+  }
+
   return (
     <div className="console-product">
       {products.map((product, index) => (
@@ -23,7 +29,7 @@ export default function Product() {
             </div>
             <div className="title-price">
               <p className="title">{product.name}</p>
-              <p className="description">{product.description}</p>
+              {/* <p className="description">{product.description}</p> */}
               <p className="price">{product.price}€</p>
               <div className="rate">
                 {[...Array(5)].map((star, index) => {
@@ -46,7 +52,6 @@ export default function Product() {
                     </label>
                   );
                 })}
-                <p>Votre note est de {rating} / 5</p>
               </div>
             </div>
           </div>

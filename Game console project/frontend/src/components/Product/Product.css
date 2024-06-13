@@ -20,7 +20,7 @@
 .title-price {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 18px;
 }
 
 .image {
@@ -34,7 +34,7 @@
   font-family: "Poppins Medium";
 }
 
-.description {
+/* .description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
@@ -50,13 +50,17 @@
   content: "...";
   position: absolute;
   background: white;
-}
+} */
 
 .price {
   color: #4a4a4a;
   font-family: "Poppins SemiBold";
 }
 
+.rate{
+    display: flex;
+    gap: 2%;
+}
 
 .star{
     cursor: pointer;
