@@ -29,12 +29,19 @@
   height: 40px;
   font-family: "Poppins Regular";
   font-size: 14px;
+  background: white;
+  border-radius: 12px;
+  color: #003f62;
 }
 
 .input-button input {
   border-radius: 12px;
-  border: solid 1px #fff;
+  border: none;
+  background: transparent;
   padding: 10px;
+}
+.input-button input:focus {
+  outline: none;
 }
 
 .input-button button {
@@ -75,25 +82,25 @@
 }
 
 @media screen and (max-width: 1070px) {
-    .right{
-        display: none;
-    }
-    .navbar-mobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 10px;
-        cursor: pointer;
-        padding: 0 20px;
-    }
-    .navbar-mobile .line1 {
-        width: 30px;
-        height: 2px;
-        background: #d9d9d9;
-    }
-    .navbar-mobile .line2 {
-        width: 20px;
-        height: 2px;
-        background: #d9d9d9;
-    }
+  .right {
+    display: none;
+  }
+  .navbar-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    padding: 0 20px;
+  }
+  .navbar-mobile .line1 {
+    width: 30px;
+    height: 2px;
+    background: #d9d9d9;
+  }
+  .navbar-mobile .line2 {
+    width: 20px;
+    height: 2px;
+    background: #d9d9d9;
+  }
 }
