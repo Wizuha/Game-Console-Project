@@ -1,14 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Product from '../../components/Product/Product'
 import './product.css'
 
 export default function Products() {
-  // use effevt
-  //boucle
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/")
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error fetching product", error));
+  }, []);
+
+  const ciblingProduct = (id, newRate) => {
+    const productsUpdated = products.map((product, index) => {
+      if (product.id_console == id) {
+        return { ...product, rate: newRate };
+      }
+      return product;
+    });
+    setProducts(productsUpdated);
+  };
+
   return (
     <div className="page-product">
       <div className="console">
-        <Product />
+        {
+          products.map((product)=>{
+            return (
+              <Product 
+                product={product}
+                key={product.id_console}
+                ciblingProduct={ciblingProduct} 
+                />
+            );
+          })}
       </div>
     </div>
   );

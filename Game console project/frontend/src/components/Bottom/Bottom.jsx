@@ -10,7 +10,7 @@ export default function Footbar() {
         </div>
         <div className="input-subscribe">
           <input type="text" name="subscribe" placeholder="Email adress" />
-          {/* <img src="send-2.svg" /> */}
+          <img src="send-2.svg" />
         </div>
         <div className="call">
           <div className="logo-call">

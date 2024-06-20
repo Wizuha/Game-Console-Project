@@ -15,7 +15,7 @@
     justify-content: center;
     height: 25%;
     width: 90%;
-    gap: 20%;
+    gap: 10%;
     background-color: white;
     border-radius: 20px;
 }
@@ -29,6 +29,14 @@
 
 .input-subscribe{
     display: flex;
+    background-color: #EDA415;
+    border-radius: 20px;
+    width: 30%;
+}
+
+
+.input-subscribe input:focus{
+    outline: none;
 }
 
 .input-subscribe img{
@@ -38,15 +46,18 @@
 .input-subscribe input{
     display: flex;
     height: 45px;
-    background-color: #EDA415;
     font-family: 'Poppins Semibold';
+    background-color: #eda415;
     color: white;
     padding: 9px 13px;
     border-radius: 20px;
-    width: 100%;
+    width: 80%;
     border: hidden;
 }
 
+.input-subscribe input::placeholder {
+    color: white;
+}
 
 .call{
     display: flex;
@@ -134,11 +145,12 @@ li{
     .bottom{
         display: flex;
         width: 100%;
-        height: 660px;
+        height: 690px;
         background-color: #003f62;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        gap: 0%;
     }
 
     .subscribe{

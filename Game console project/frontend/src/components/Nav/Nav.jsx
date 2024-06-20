@@ -3,6 +3,7 @@ import "./Nav.css";
 
 export default function Nav() {
   const [view, setView] = useState(false);
+
   return (
     <nav className="nav">
       <div className="content">
