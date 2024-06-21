@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import Filter from '../../components/Filter/Filter';
 import Product from '../../components/Product/Product'
 import './product.css'
+import { SearchContext, useMyContext } from '../../context/searchContext';
+import { useContext } from 'react';
 
 export default function Products() {
-  const [products, setProducts] = useState([]);
+  const {products,setProducts,filterData} = useMyContext();
 
   useEffect(() => {
     fetch("http://localhost:8000/")
@@ -11,6 +14,7 @@ export default function Products() {
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching product", error));
   }, []);
+
 
   const ciblingProduct = (id, newRate) => {
     const productsUpdated = products.map((product, index) => {
@@ -22,11 +26,12 @@ export default function Products() {
     setProducts(productsUpdated);
   };
 
+
   return (
     <div className="page-product">
-      <div className="console">
+      <Filter />
         {
-          products.map((product)=>{
+          filterData?.map((product)=>{
             return (
               <Product 
                 product={product}
@@ -35,7 +40,6 @@ export default function Products() {
                 />
             );
           })}
-      </div>
     </div>
   );
 }

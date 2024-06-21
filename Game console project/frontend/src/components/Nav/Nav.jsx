@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import SearchContext, { useMyContext } from "../../context/searchContext";
 import "./Nav.css";
 
 export default function Nav() {
   const [view, setView] = useState(false);
+  const { filterData, search,setSearch } = useMyContext();
 
   return (
     <nav className="nav">
@@ -12,7 +14,15 @@ export default function Nav() {
           <p>Game Center</p>
         </div>
         <div className="input-button">
-          <input type="text" name="search" placeholder="Search console" />
+          <input
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+            type="text"
+            name="search"
+            placeholder="Search console"
+          />
           <button for="submit">Search</button>
         </div>
         <div className="right">

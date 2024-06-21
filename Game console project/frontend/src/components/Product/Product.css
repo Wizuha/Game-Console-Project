@@ -1,21 +1,14 @@
-.console-product {
+.product-content{
   display: flex;
-  justify-items: center;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  margin: 80px 0;
-  gap: 60px;
-  justify-content: space-around;
-  
 }
 .product {
   display: flex;
-  width: 19%;
   border: solid 1px #b6b6b6;
   border-radius: 20px;
   flex-direction: column;
   padding: 20px 20px;
+  width: 19%;
+  margin: 1%;
 }
 
 .title-price {
