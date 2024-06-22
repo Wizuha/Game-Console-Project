@@ -1,0 +1,18 @@
+.filter-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  gap: 30%;
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+}
+

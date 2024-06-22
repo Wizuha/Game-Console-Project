@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import Filter from '../../components/Filter/Filter';
-import Product from '../../components/Product/Product'
-import './product.css'
-import { SearchContext, useMyContext } from '../../context/searchContext';
-import { useContext } from 'react';
+import React, { useEffect, useState } from "react";
+import Filter from "../../components/Filter/Filter";
+import Product from "../../components/Product/Product";
+import "./product.css";
+import { SearchContext, useMyContext } from "../../context/searchContext";
+import { useContext } from "react";
 
 export default function Products() {
-  const {products,setProducts,filterData} = useMyContext();
+  const { products, setProducts, filterData } = useMyContext();
 
   useEffect(() => {
     fetch("http://localhost:8000/")
@@ -14,7 +14,6 @@ export default function Products() {
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching product", error));
   }, []);
-
 
   const ciblingProduct = (id, newRate) => {
     const productsUpdated = products.map((product, index) => {
@@ -26,20 +25,22 @@ export default function Products() {
     setProducts(productsUpdated);
   };
 
-
   return (
     <div className="page-product">
-      <Filter />
-        {
-          filterData?.map((product)=>{
-            return (
-              <Product 
-                product={product}
-                key={product.id_console}
-                ciblingProduct={ciblingProduct} 
-                />
-            );
-          })}
+      <div className="filter-section">
+        <Filter />
+      </div>
+      <div className="product-section">
+        {filterData?.map((product) => {
+          return (
+            <Product
+              product={product}
+              key={product.id_console}
+              ciblingProduct={ciblingProduct}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
