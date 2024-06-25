@@ -11,8 +11,7 @@
 .product-section {
   display: flex;
   width: 70%;
-  margin: 80px 0;
-  justify-content: center;
+  margin: 2% 0;
   flex-wrap: wrap;
 }
 

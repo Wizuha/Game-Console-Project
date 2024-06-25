@@ -33,4 +33,18 @@
     display: flex;
     flex-direction: column;
     gap: 10%;
+    height: 15%;
+}
+
+.availabality{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    height: 10%;
+}
+
+.product-type{
+    display: flex;
+    flex-direction: column;
+    height: 6%;
 }
