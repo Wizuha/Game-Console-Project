@@ -6,25 +6,25 @@ export default function Filter() {
     <div className="filter-content">
       <div className="categorie">
         <div className="head">
-          <h1>Categorie</h1>
+          <h1>Categories</h1>
           <button>Reset</button>
         </div>
         <div className="filter">
           <div className="all-categories">
             <input type="checkbox" name="checkbox" />
-            <a>All categories</a>
+            <p>All categories</p>
           </div>
           <div className="Nintendo">
             <input type="checkbox" name="checkbox" />
-            <a>Nintendo</a>
+            <p>Nintendo</p>
           </div>
           <div className="Playstation">
             <input type="checkbox" name="checkbox" />
-            <a>Playstation</a>
+            <p>Playstation</p>
           </div>
           <div className="Xbox">
             <input type="checkbox" name="checkbox" />
-            <a>Xbox</a>
+            <p>Xbox</p>
           </div>
         </div>
       </div>
@@ -38,11 +38,11 @@ export default function Filter() {
           <div className="filter">
             <div className="In-stock">
               <input type="checkbox" name="checkbox" />
-              <a>In Stock</a>
+              <p>In Stock</p>
             </div>
             <div className="Out-of-stock">
               <input type="checkbox" name="checkbox" />
-              <a>Out of stock</a>
+              <p>Out of stock</p>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function Filter() {
         <div className="filter">
           <div className="smart-watch">
             <input type="checkbox" name="checkbox" />
-            <a>Smart watch</a>
+            <p>Smart watch</p>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function Filter() {
         <div className="filter">
           <div className="smart-watch">
             <input type="checkbox" name="checkbox" />
-            <a>Smart watch</a>
+            <p>Smart watch</p>
           </div>
         </div>
       </div>
@@ -86,23 +86,23 @@ export default function Filter() {
           <h1>Size</h1>
           <button>Reset</button>
         </div>
-      </div>
-      <div className="filter">
-        <div className="M">
-          <input type="checkbox" name="checkbox" />
-          <a>M</a>
-        </div>
-        <div className="S">
-          <input type="checkbox" name="checkbox" />
-          <a>S</a>
-        </div>
-        <div className="X">
-          <input type="checkbox" name="checkbox" />
-          <a>X</a>
-        </div>
-        <div className="XX">
-          <input type="checkbox" name="checkbox" />
-          <a>XX</a>
+        <div className="filter">
+          <div className="M">
+            <input type="checkbox" name="checkbox" />
+            <p>M</p>
+          </div>
+          <div className="S">
+            <input type="checkbox" name="checkbox" />
+            <p>S</p>
+          </div>
+          <div className="X">
+            <input type="checkbox" name="checkbox" />
+            <p>X</p>
+          </div>
+          <div className="XX">
+            <input type="checkbox" name="checkbox" />
+            <p>XX</p>
+          </div>
         </div>
       </div>
     </div>
