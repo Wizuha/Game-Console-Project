@@ -7,8 +7,8 @@
   border-radius: 20px;
   flex-direction: column;
   padding: 20px 20px;
-  width: 19%;
-  margin: 1%;
+  width: 25%;
+  margin: 1.5%;
 }
 
 .title-price {
@@ -27,24 +27,6 @@
   color: #003f62;
   font-family: "Poppins Medium";
 }
-
-/* .description {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: relative;
-  max-height: calc(1em*1);
-  line-height: 1em;
-  overflow: hidden;
-}
-
-.description::after {
-  content: "...";
-  position: absolute;
-  background: white;
-} */
 
 .price {
   color: #4a4a4a;

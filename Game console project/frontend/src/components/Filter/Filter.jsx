@@ -74,13 +74,6 @@ export default function Filter() {
         </div>
       </div>
       <div className="line"></div>
-      <div className="color">
-        <div className="head">
-          <h1>Color</h1>
-          <button>Reset</button>
-        </div>
-      </div>
-      <div className="line"></div>
       <div className="size">
         <div className="head">
           <h1>Size</h1>
