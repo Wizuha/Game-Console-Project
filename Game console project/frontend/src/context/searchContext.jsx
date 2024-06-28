@@ -6,9 +6,10 @@ export const MyProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
 
-  const filterData = products?.filter((produit) =>
-    produit.name.toLowerCase().includes(search.toLowerCase())
-  );
+  const filterData = products?.filter((produit) => {
+    const matchSearch = produit.name.toLowerCase().includes(search.toLowerCase());
+    return matchSearch;
+  });
 
   const contextValue = {
     filterData,
@@ -16,7 +17,7 @@ export const MyProvider = ({ children }) => {
     setSearch,
     products,
     setProducts
-  }
+  };
 
   return (
     <SearchContext.Provider

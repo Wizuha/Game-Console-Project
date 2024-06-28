@@ -2,7 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import Breadcrumb from "./components/Breadcrumb/Breadcrumb";
 import Products from "./pages/Product/product";
-import SearchContext, { MyProvider } from "./context/searchContext";
+import { MyProvider } from "./context/searchContext";
+import ProductDetails from "./pages/InfoProduct/ProductDetails";
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
             <Breadcrumb />
             <Routes>
               <Route path="/" element={<Products />} />
+              <Route path="/product/:id_console" element={<ProductDetails />} />
             </Routes>
           </Layout>
         </BrowserRouter>

@@ -1,7 +1,9 @@
-import React from "react";
+
+import { useMyContext } from "../../context/searchContext";
 import "./Filter.css";
 
 export default function Filter() {
+
   return (
     <div className="filter-content">
       <div className="categorie">
@@ -10,10 +12,6 @@ export default function Filter() {
           <button>Reset</button>
         </div>
         <div className="filter">
-          <div className="all-categories">
-            <input type="checkbox" name="checkbox" />
-            <p>All categories</p>
-          </div>
           <div className="Nintendo">
             <input type="checkbox" name="checkbox" />
             <p>Nintendo</p>

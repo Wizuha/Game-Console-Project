@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Filter from "../../components/Filter/Filter";
 import Product from "../../components/Product/Product";
+import { Link } from "react-router-dom";
 import "./product.css";
-import { SearchContext, useMyContext } from "../../context/searchContext";
-import { useContext } from "react";
+import { useMyContext } from "../../context/searchContext";
 
 export default function Products() {
   const { products, setProducts, filterData } = useMyContext();
@@ -33,11 +33,13 @@ export default function Products() {
       <div className="product-section">
         {filterData?.map((product) => {
           return (
-            <Product
-              product={product}
-              key={product.id_console}
-              ciblingProduct={ciblingProduct}
-            />
+            <Link to={`product/${product.id_console}`}>
+              <Product
+                product={product}
+                key={product.id_console}
+                ciblingProduct={ciblingProduct}
+              />
+            </Link>
           );
         })}
       </div>

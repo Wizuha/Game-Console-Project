@@ -8,6 +8,7 @@
 .filter-section {
   display: flex;
   width: 30%;
+  padding: 2% 20px;
 }
 
 .product-section {
