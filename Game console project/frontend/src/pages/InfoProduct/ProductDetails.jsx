@@ -5,19 +5,16 @@ export default function ProductDetails() {
   const {id_console} = useParams();
   const [product,setProduct] = useState(null);
   
-  useEffect(() = async() => {
-    try {
-      const response = await fetch(`http://localhost:8000/${id_console}`);
-      const data = await response.json();
-      setProduct(data)
-    }catch (error){
-      console.log(error)
-    }
+  useEffect(() => {
+    fetch(`http://localhost:8000/product/${id_console}`)
+      .then((response) => response.json())
+      .then((data) => setProduct(data))
+      .then((error) => console.error("Error fetching product detail",error))
   })
-  
+  console.log(product)
   return (
     <div>
-      
+      <p>{product.name}</p>
     </div>
   )
 }
