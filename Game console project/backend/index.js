@@ -23,19 +23,23 @@ app.get("/", (req, response) => {
 app.get("/product/:id", (req, response) => {
   const consoleId = req.params.id;
   DB.query(
-    `SELECT * FROM console WHERE id_console = $1`,
+    `SELECT * FROM public.console WHERE id_console = $1`,
     [consoleId],
     (err, result) => {
-      if (!err) {
-        console.log("Les données ont été affiché avec succès !");
-        response.status(200).send("Les données ont été afiché avec succès !");
-      } else {
-        console.log("Erreur lors de l'affichage des données :", err);
+      if (result.rows.length === 0) {
+        console.log("Produit non trouvé");
+        response.status(404).send("Produit non trouvé");
+      }
+      if (err) {
+        console.log("Erreur lors de l'affichage des données :", err.message);
         response.status(500).send("Erreur lors de l'affichage des données.");
       }
+      console.log("Les données ont été affiché avec succès !");
+      response.status(200).send(result.rows[0]);
     }
   );
 });
+
 
 app.post("/add-console", (req, response) => {
   const { name, image, description, price } = req.body;
