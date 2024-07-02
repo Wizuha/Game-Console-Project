@@ -35,6 +35,53 @@
     border-radius: 20px;
 }
 
+.product-details h1{
+    font-family: 'Poppins Medium';
+    color: #003F62;
+    font-size: 2rem;
+}
+
+.product-details h2 {}
+
+.title-price p{
+    font-family: "Poppins SemiBold";
+    color: #4A4A4A;
+    font-size: 1.5em;
+}
+
+.information-achat{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+
+.color-detail{
+    display: flex;
+    align-items: center;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+}
+
+.category-detail{
+    display: flex;
+    align-items: center;
+}
+
+.category-detail >div{
+    display: flex;
+}
+
+.share{
+    display: flex;
+}
+
+
+
+
 
 
 
