@@ -2,12 +2,14 @@
     display: flex;
     height: 100vh;
     width: 100vw;
+    justify-content: center;
+    gap: 2%;
 }
 
 .images{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     align-items: center;
     margin-top: 5%;
     gap: 4%;
@@ -41,7 +43,11 @@
     font-size: 2rem;
 }
 
-.product-details h2 {}
+.product-details h2 {
+    font-family: 'Poppins Medium';
+    font-size: 1rem;
+    color: #232323;
+}
 
 .title-price p{
     font-family: "Poppins SemiBold";
@@ -53,12 +59,29 @@
     display: flex;
     flex-direction: column;
     margin-top: 5%;
+    gap: 5.5%;
+}
+
+.availability-details{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.in-stock{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 5%;
+    font-family: 'Poppins Medium';
+    color: #30BD57;
 }
 
 
 .color-detail{
     display: flex;
     align-items: center;
+
 }
 
 .quantity{
@@ -66,9 +89,38 @@
     align-items: center;
 }
 
+.card-buy{
+    display: flex;
+    gap: 10%;
+}
+
+.card-buy button{
+    background-color: #EDA415;
+    border: none;
+    width: 50%;
+    height: 230%;
+    border-radius: 30px;
+    font-family: 'Poppins SemiBold';
+    color: white;
+}
+
+.sku{
+    display: flex;
+    gap: 5%;
+    font-family: 'Poppins Medium';
+    color: #434343;
+}
+
 .category-detail{
     display: flex;
     align-items: center;
+    gap: 5%;
+    width: 110%;
+}
+
+.pourcent{
+    display: flex;
+    gap:1%;
 }
 
 .category-detail >div{

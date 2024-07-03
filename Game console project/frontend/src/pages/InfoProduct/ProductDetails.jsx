@@ -80,9 +80,9 @@ export default function ProductDetails() {
             );
           })} */}
         </div>
-        <div className="Availability-details">
+        <div className="availability-details">
           <h2>Availabality :</h2>
-          <p>
+          <p className="in-stock">
             <FaCheck /> In Stock
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function ProductDetails() {
         </div>
         <div className="category-detail">
           <h2>Category :</h2>
-          <div >
+          <div className="pourcent" >
             <p>20% off,</p>
             <p>49% off</p>
             <p>Alex remote</p>
