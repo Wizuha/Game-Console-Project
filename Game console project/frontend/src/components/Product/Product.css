@@ -1,6 +1,3 @@
-.product-content{
-  display: flex;
-}
 .product {
   display: flex;
   border: solid 1px #b6b6b6;
@@ -36,6 +33,10 @@
 .rate{
     display: flex;
     gap: 2%;
+}
+
+.rate input{
+  display: none;
 }
 
 .star{

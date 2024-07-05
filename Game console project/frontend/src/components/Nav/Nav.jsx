@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import SearchContext, { useMyContext } from "../../context/searchContext";
+import React, { useState } from "react";
+import { useMyContext } from "../../context/searchContext";
 import "./Nav.css";
 
 export default function Nav() {

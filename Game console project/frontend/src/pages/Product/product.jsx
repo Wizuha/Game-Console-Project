@@ -33,13 +33,11 @@ export default function Products() {
       <div className="product-section">
         {filterData?.map((product) => {
           return (
-            <Link to={`/product/${product.id_console}`}>
               <Product
                 product={product}
                 key={product.id_console}
                 ciblingProduct={ciblingProduct}
               />
-            </Link>
           );
         })}
       </div>

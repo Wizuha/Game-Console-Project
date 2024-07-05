@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { FaStar } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
-import './ProductDetails.css'
+import "./ProductDetails.css";
 
 export default function ProductDetails() {
   const { id_console } = useParams();
   const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true); 
-  const [error, setError] = useState(null); 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [quantity,setQuantity] = useState(1);
+
+  const handleIncrease = () => {
+    setQuantity(quantity => quantity + 1 );
+  }
+
+  const handleDecrease = () =>{
+    setQuantity(quantity > 1 ? quantity - 1 : 1)
+  }
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -52,33 +60,12 @@ export default function ProductDetails() {
         </div>
       </div>
       <div className="information-achat">
-        <div className="title-price">
+        <div className="title-price-details">
           <h1>{product.name}</h1>
           <p>${product.price}</p>
         </div>
         <div className="rate-product-detail">
           <p>Note</p>
-          {/* {[...Array(5)].map((star, index) => {
-            const currentRating = product.rate;
-            return (
-              <label key={index}>
-                <input
-                  type="radio"
-                  name="rating"
-                  value={currentRating}
-                  onClick={() => ciblingProduct(product.id_console, index)}
-                />
-                <FaStar
-                  id={index}
-                  className="star"
-                  size={20}
-                  color={index <= currentRating ? "ACACAC" : "e4e5e9"}
-                  onMouseEnter={() => setHover(currentRating)}
-                  onMouseLeave={() => setHover(null)}
-                />
-              </label>
-            );
-          })} */}
         </div>
         <div className="availability-details">
           <h2>Availabality :</h2>
@@ -89,14 +76,18 @@ export default function ProductDetails() {
         <div className="line"></div>
         <div className="color-detail">
           <h2>Color :</h2>
-          <input type="radio" name="green" />
-          <input type="radio" name="black" />
+          <div className="color-button">
+            <input type="radio" name="green" />
+            <input type="radio" name="black" />
+          </div>
         </div>
-        <div className="quantity">
+        <div className="quantity-details">
           <h2>Quantity :</h2>
-          <button>+</button>
-          <p>1</p>
-          <button>-</button>
+          <div className="console-number">
+            <button onClick={handleIncrease}>+</button>
+            <p>{quantity}</p>
+            <button onClick={handleDecrease}>-</button>
+          </div>
         </div>
         <div className="card-buy">
           <button>Add to card</button>
@@ -109,11 +100,7 @@ export default function ProductDetails() {
         </div>
         <div className="category-detail">
           <h2>Category :</h2>
-          <div className="pourcent" >
-            <p>20% off,</p>
-            <p>49% off</p>
-            <p>Alex remote</p>
-          </div>
+          <p>20% off, 49% off, Alex remote</p>
         </div>
         <div className="share">
           <h2>Share :</h2>

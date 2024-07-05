@@ -31,6 +31,14 @@
     justify-content: center;
 }
 
+.breadcrumb-mid button{
+    background-color: #F4F4F4;
+    border: hidden;
+    font-family: "Poppins Medium";
+    font-size: 16px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1070px)   {
     .breadcrumb{
         display: none

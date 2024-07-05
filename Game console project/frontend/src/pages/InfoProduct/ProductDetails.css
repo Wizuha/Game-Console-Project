@@ -1,140 +1,154 @@
-.product-details{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    gap: 2%;
+.product-details {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  gap: 2%;
 }
 
-.images{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    align-items: center;
-    margin-top: 5%;
-    gap: 4%;
+.images {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  margin-top: 5%;
+  gap: 4%;
 }
 
-.image-head{
-    border: solid #000 1px;
-    height: 65%;
-    width: 85%;
-    border-radius: 20px;
+.image-head {
+  border: solid #000 1px;
+  height: 65%;
+  width: 85%;
+  border-radius: 20px;
 }
 
-.image-bottom{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 3%;
+.image-bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
 }
 
-.image-bottom >div{
-    width: 41%;
-    border: solid #000 1px;
-    height: 20vh;
-    border-radius: 20px;
+.image-bottom > div {
+  width: 41%;
+  border: solid #000 1px;
+  height: 20vh;
+  border-radius: 20px;
 }
 
-.product-details h1{
-    font-family: 'Poppins Medium';
-    color: #003F62;
-    font-size: 2rem;
+.product-details h1 {
+  font-family: "Poppins Medium";
+  color: #003f62;
+  font-size: 2rem;
 }
 
 .product-details h2 {
-    font-family: 'Poppins Medium';
-    font-size: 1rem;
-    color: #232323;
+  font-family: "Poppins Medium";
+  font-size: 1rem;
+  color: #232323;
 }
 
-.title-price p{
-    font-family: "Poppins SemiBold";
-    color: #4A4A4A;
-    font-size: 1.5em;
+.title-price-details {
+  font-family: "Poppins SemiBold";
+  color: #4a4a4a;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.information-achat{
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
-    gap: 5.5%;
+.information-achat {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  width: 30%;
+  gap: 5.5%;
 }
 
-.availability-details{
-    display: flex;
-    align-items: center;
-    gap: 5%;
+.availability-details {
+  display: flex;
+  align-items: center;
+  gap: 5%;
 }
 
-.in-stock{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    gap: 5%;
-    font-family: 'Poppins Medium';
-    color: #30BD57;
+.in-stock {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  gap: 5%;
+  font-family: "Poppins Medium";
+  color: #30bd57;
 }
 
-
-.color-detail{
-    display: flex;
-    align-items: center;
-
+.color-detail {
+  display: flex;
+  align-items: center;
+  gap: 3%;
 }
 
-.quantity{
-    display: flex;
-    align-items: center;
+.quantity-details {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins Medium";
+  gap: 5%;
 }
 
-.card-buy{
-    display: flex;
-    gap: 10%;
+.console-number{
+  display: flex;
+  align-items: center;
 }
 
-.card-buy button{
-    background-color: #EDA415;
-    border: none;
-    width: 50%;
-    height: 230%;
-    border-radius: 30px;
-    font-family: 'Poppins SemiBold';
-    color: white;
+.console-number p{ 
+  padding: 0.8px 14px;
 }
 
-.sku{
-    display: flex;
-    gap: 5%;
-    font-family: 'Poppins Medium';
-    color: #434343;
+.quantity-details button {
+  background-color: #eeee;
+  border: #bdbdbd;
+  border: solid 1px #ACACAC;
+  cursor: pointer;
 }
 
-.category-detail{
-    display: flex;
-    align-items: center;
-    gap: 5%;
-    width: 110%;
+.card-buy {
+  display: flex;
+  gap: 10%;
 }
 
-.pourcent{
-    display: flex;
-    gap:1%;
+.card-buy button {
+  background-color: #eda415;
+  border: none;
+  width: 50%;
+  height: 230%;
+  border-radius: 30px;
+  font-family: "Poppins SemiBold";
+  color: white;
+  cursor: pointer;
 }
 
-.category-detail >div{
-    display: flex;
+.sku {
+  display: flex;
+  gap: 5%;
+  font-family: "Poppins Medium";
+  color: #434343;
 }
 
-.share{
-    display: flex;
+.category-detail {
+  display: flex;
+  align-items: center;
+  gap: 5%;
 }
 
+.category-detail {
+  font-family: "Poppins Regular";
+  font-size: 0.8rem;
+  color: #434343;
+}
 
+.category-detail > div {
+  display: flex;
+}
 
-
-
-
-
-
+.share {
+  display: flex;
+}

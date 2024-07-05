@@ -6,7 +6,7 @@ import { MyProvider } from "./context/searchContext";
 import ProductDetails from "./pages/InfoProduct/ProductDetails";
 function App() {
   return (
-    <>
+    <div className="app">
       <MyProvider>
         <BrowserRouter>
           <Layout>
@@ -18,7 +18,7 @@ function App() {
           </Layout>
         </BrowserRouter>
       </MyProvider>
-    </>
+    </div>
   );
 }
 
