@@ -115,7 +115,7 @@
   gap: 10%;
 }
 
-.card-buy button {
+.card-buy button{
   background-color: #eda415;
   border: none;
   width: 50%;
@@ -125,6 +125,19 @@
   color: white;
   cursor: pointer;
 }
+
+.card-buy button:hover{
+  background-color: white;
+  border: none;
+  width: 50%;
+  height: 230%;
+  border-radius: 30px;
+  font-family: "Poppins SemiBold";
+  color: #eda415;
+  cursor: pointer;
+  border: solid 1px #eda415;
+}
+
 
 .sku {
   display: flex;
