@@ -103,6 +103,7 @@ export default function ProductDetails() {
           <h2>Share :</h2>
           <div className="icone-share">
             <img src="/google.svg" />
+            
             <img src="/facebook.svg" />
             <img src="/whatsapp.svg" />
           </div>
