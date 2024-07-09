@@ -20,6 +20,37 @@ app.get("/", (req, response) => {
   });
 });
 
+app.put("/product/:id", async (req, response) => {
+  const consoleId = req.params.id;
+  console.log(req.params);
+  console.log(req.body);
+  const { rate } = req.body;
+  const res = await DB.query(
+    `SELECT * FROm public.console WHERE id_console = $1`,
+    [Number(consoleId)]
+  );
+  console.log({ res });
+  DB.query(
+    `UPDATE public.console SET rate = $2  WHERE id_console = $1 RETURNING *`,
+    [Number(consoleId), rate],
+    (err, result) => {
+      console.log(rate);
+      if (result.rows.length === 0) {
+        console.log("Produit non trouvé");
+        response.status(404).json({ msg: "Produit non trouvé" });
+      }
+      if (err) {
+        console.log("Erreur lors de l'affichage des données :", err.message);
+        response.status(500).send("Erreur lors de l'affichage des données.");
+      } else {
+        console.log("La note a bien été modifié !");
+        response.status(200).send(result.rows[0]);
+      }
+    }
+  );
+});
+
+
 app.get("/product/:id", (req, response) => {
   const consoleId = req.params.id;
   DB.query(
@@ -39,7 +70,6 @@ app.get("/product/:id", (req, response) => {
     }
   );
 });
-
 
 app.post("/add-console", (req, response) => {
   const { name, image, description, price } = req.body;

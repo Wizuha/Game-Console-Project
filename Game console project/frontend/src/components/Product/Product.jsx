@@ -7,6 +7,30 @@ import "./Product.css";
 export default function Product({ product, ciblingProduct }) {
   const [hover, setHover] = useState(null);
   const [rate, setRate] = useState(0);
+  const [rateProduct, setRateProduct] = useState("");
+
+  const handlSendReview = async (product, index, id_console) => {
+    try {
+      ciblingProduct(product.id_console, index);
+      let response = await fetch(
+        `http://localhost:8000/product/${id_console}`,
+        {
+          method: "PUT",
+          body: JSON.stringify({
+            product: product,
+            rate: index,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      let data = await response.json();
+      setRateProduct(data);
+    } catch (e) {
+      console.error(e.message);
+    }
+  };
 
   return (
     <div className="product">
@@ -17,7 +41,9 @@ export default function Product({ product, ciblingProduct }) {
           </div>
         </Link>
         <div className="title-price">
-          <p className="title">{product.name}</p>
+          <Link to={`product/${product.id_console}`}>
+            <p className="title">{product.name}</p>
+          </Link>
           <p className="price">{product.price}€</p>
           <div className="rate">
             {[...Array(5)].map((star, index) => {
@@ -28,7 +54,9 @@ export default function Product({ product, ciblingProduct }) {
                     type="radio"
                     name="rating"
                     value={currentRating}
-                    onClick={() => ciblingProduct(product.id_console, index)}
+                    onClick={() =>
+                      handlSendReview(product, index, product.id_console)
+                    }
                   />
                   <FaStar
                     id={index}
@@ -37,6 +65,7 @@ export default function Product({ product, ciblingProduct }) {
                     color={index <= currentRating ? "ACACAC" : "e4e5e9"}
                     onMouseEnter={() => setHover(currentRating)}
                     onMouseLeave={() => setHover(null)}
+                    // onClick={(e) => console.log(e)}
                   />
                 </label>
               );

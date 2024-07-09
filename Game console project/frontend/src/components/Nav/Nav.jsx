@@ -28,6 +28,7 @@ export default function Nav() {
         <div className="right">
           <div className="cart">
             <img src="/shopping-cart.svg" />
+            <span>9</span>
             <p>Cart</p>
           </div>
           <div className="like">

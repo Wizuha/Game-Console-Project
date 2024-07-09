@@ -124,15 +124,12 @@
   font-family: "Poppins SemiBold";
   color: white;
   cursor: pointer;
+  border: solid 1px #eda51500;
+  transition: 0.2s;
 }
 
 .card-buy button:hover{
   background-color: white;
-  border: none;
-  width: 50%;
-  height: 230%;
-  border-radius: 30px;
-  font-family: "Poppins SemiBold";
   color: #eda415;
   cursor: pointer;
   border: solid 1px #eda415;
@@ -164,4 +161,12 @@
 
 .share {
   display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.icone-share{
+  display: flex;
+  align-items: center;
+  gap: 30%;
 }

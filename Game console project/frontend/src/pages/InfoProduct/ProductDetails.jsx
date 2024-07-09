@@ -8,15 +8,15 @@ export default function ProductDetails() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [quantity,setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
 
   const handleIncrease = () => {
-    setQuantity(quantity => quantity + 1 );
-  }
+    setQuantity((quantity) => quantity + 1);
+  };
 
-  const handleDecrease = () =>{
-    setQuantity(quantity > 1 ? quantity - 1 : 1)
-  }
+  const handleDecrease = () => {
+    setQuantity(quantity > 1 ? quantity - 1 : 1);
+  };
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -64,9 +64,6 @@ export default function ProductDetails() {
           <h1>{product.name}</h1>
           <p>${product.price}</p>
         </div>
-        <div className="rate-product-detail">
-          <p>Note</p>
-        </div>
         <div className="availability-details">
           <h2>Availabality :</h2>
           <p className="in-stock">
@@ -104,9 +101,11 @@ export default function ProductDetails() {
         </div>
         <div className="share">
           <h2>Share :</h2>
-          <img src="/google.svg" />
-          <img src="/facebook.svg" />
-          <img src="/whatsapp.svg" />
+          <div className="icone-share">
+            <img src="/google.svg" />
+            <img src="/facebook.svg" />
+            <img src="/whatsapp.svg" />
+          </div>
         </div>
       </div>
     </div>
