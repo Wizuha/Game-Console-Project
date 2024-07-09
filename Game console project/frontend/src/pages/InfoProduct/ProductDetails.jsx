@@ -104,9 +104,9 @@ export default function ProductDetails() {
         </div>
         <div className="share">
           <h2>Share :</h2>
-          <img src="google.svg" />
-          <img src="facebook.svg" />
-          <img src="whatsapp.svg" />
+          <img src="/google.svg" />
+          <img src="/facebook.svg" />
+          <img src="/whatsapp.svg" />
         </div>
       </div>
     </div>

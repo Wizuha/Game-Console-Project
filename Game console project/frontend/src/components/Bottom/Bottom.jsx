@@ -10,11 +10,11 @@ export default function Footbar() {
         </div>
         <div className="input-subscribe">
           <input type="text" name="subscribe" placeholder="Email adress" />
-          <img src="send-2.svg" />
+          <img src="/send-2.svg" />
         </div>
         <div className="call">
           <div className="logo-call">
-            <img src="headphone.svg" />
+            <img src="/headphone.svg" />
           </div>
           <div>
             <p>
@@ -26,7 +26,7 @@ export default function Footbar() {
       <div className="foot-bottom">
         <div className="left-bottom">
           <div className="logo-site">
-            <img src="Union.svg" />
+            <img src="/Union.svg" />
             <p>Game center</p>
           </div>
           <div className="adress">

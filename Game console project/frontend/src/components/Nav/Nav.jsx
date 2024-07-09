@@ -4,13 +4,13 @@ import "./Nav.css";
 
 export default function Nav() {
   const [view, setView] = useState(false);
-  const { filterData, search,setSearch } = useMyContext();
+  const { filterData, search, setSearch } = useMyContext();
 
   return (
     <nav className="nav">
       <div className="content">
         <div className="left">
-          <img src="Union.svg" />
+          <img src="/Union.svg" />
           <p>Game Center</p>
         </div>
         <div className="input-button">
@@ -27,11 +27,11 @@ export default function Nav() {
         </div>
         <div className="right">
           <div className="cart">
-            <img src="shopping-cart.svg" />
+            <img src="/shopping-cart.svg" />
             <p>Cart</p>
           </div>
           <div className="like">
-            <img src="heart.svg" />
+            <img src="/heart.svg" />
             <p>Like</p>
           </div>
         </div>
