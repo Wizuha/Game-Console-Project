@@ -72,6 +72,24 @@
   align-items: center;
 }
 
+.liste{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.liste span{
+  font-size: 12px;
+  background-color: #EDA415;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-family: "Poppins Regular";
+}
+
 .navbar-mobile {
   display: flex;
   flex-direction: column;

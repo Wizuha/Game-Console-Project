@@ -16,10 +16,16 @@
 }
 
 .image-head {
-  border: solid #000 1px;
   height: 65%;
   width: 85%;
   border-radius: 20px;
+}
+
+.image-head img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5%;
 }
 
 .image-bottom {

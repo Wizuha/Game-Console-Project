@@ -53,10 +53,8 @@ export default function ProductDetails() {
   return (
     <div className="product-details">
       <div className="images">
-        <div className="image-head"></div>
-        <div className="image-bottom">
-          <div className="first-picture"></div>
-          <div className="second-picture"></div>
+        <div className="image-head">
+          <img src={product.image} />
         </div>
       </div>
       <div className="information-achat">
@@ -71,13 +69,19 @@ export default function ProductDetails() {
           </p>
         </div>
         <div className="line"></div>
-        <div className="color-detail">
-          <h2>Color :</h2>
-          <div className="color-button">
-            <input type="radio" name="green" />
-            <input type="radio" name="black" />
+        <fieldset>
+          <div className="color-detail">
+            <h2>Color :</h2>
+            <div className="color-button">
+              <div className="color-green">
+                <input type="radio" id="1" name="color" value="green" checked />
+              </div>
+              <div className="color-black">
+                <input type="radio" id="2" name="color" value="black"/>
+              </div>
+            </div>
           </div>
-        </div>
+        </fieldset>
         <div className="quantity-details">
           <h2>Quantity :</h2>
           <div className="console-number">
@@ -103,7 +107,6 @@ export default function ProductDetails() {
           <h2>Share :</h2>
           <div className="icone-share">
             <img src="/google.svg" />
-            
             <img src="/facebook.svg" />
             <img src="/whatsapp.svg" />
           </div>

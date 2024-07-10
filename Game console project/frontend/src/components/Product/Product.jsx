@@ -37,7 +37,7 @@ export default function Product({ product, ciblingProduct }) {
       <div className="product-item">
         <Link to={`product/${product.id_console}`} >
           <div className="image">
-            <img src="logo192.png" alt="Product" />
+            <img src={product.image} alt="Product" />
           </div>
         </Link>
         <div className="title-price">

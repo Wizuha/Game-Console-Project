@@ -1,8 +1,9 @@
 .product {
   display: flex;
-  border: solid 1px #b6b6b6;
+  border: solid 1px #f2e0e0;
   border-radius: 20px;
   flex-direction: column;
+  justify-content: space-between;
   padding: 20px 20px;
   width: 25%;
   margin: 1.5%;
@@ -20,6 +21,12 @@
   justify-content: center;
 }
 
+.image img {
+  width: 100%;
+  min-height: 194px;
+  object-fit: cover;
+}
+
 .title {
   color: #003f62;
   font-family: "Poppins Medium";
@@ -30,19 +37,59 @@
   font-family: "Poppins SemiBold";
 }
 
-.rate{
-    display: flex;
-    gap: 2%;
+.rate {
+  display: flex;
+  gap: 2%;
 }
 
-.rate input{
+.color-button {
+  display: flex;
+  gap: 5%;
+}
+
+.color-button input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-green input[type="radio"] {
+  background-color: #d0ec48;
+}
+
+.color-green input[type="radio"]:checked {
+  border-radius: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: 2px solid #b6b6b6;
+}
+
+.color-black input[type="radio"]:checked {
+  border-radius: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: 2px solid #b6b6b6;
+}
+
+.color-black input[type="radio"] {
+  background-color: #565656;
+}
+
+.rate input {
   display: none;
 }
 
-.star{
-    cursor: pointer;
+.star {
+  cursor: pointer;
 }
-
 
 @media screen and (max-width: 1070px) {
   .product {
@@ -71,4 +118,10 @@
   .console-product {
     margin-top: 10%;
   }
+
+  .image img {
+  width: 100%;
+  min-height: 194px;
+  height: 100%;
+}
 }
