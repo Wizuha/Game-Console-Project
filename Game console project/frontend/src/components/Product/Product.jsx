@@ -35,13 +35,13 @@ export default function Product({ product, ciblingProduct }) {
   return (
     <div className="product">
       <div className="product-item">
-        <Link to={`product/${product.id_console}`}>
+        <Link to={`product/${product.id_console}`} >
           <div className="image">
             <img src="logo192.png" alt="Product" />
           </div>
         </Link>
         <div className="title-price">
-          <Link to={`product/${product.id_console}`}>
+          <Link to={`product/${product.id_console}`} style={{ textDecoration: 'none', color: 'inherit' }}>
             <p className="title">{product.name}</p>
           </Link>
           <p className="price">{product.price}€</p>
