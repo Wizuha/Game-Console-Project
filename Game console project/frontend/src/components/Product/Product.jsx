@@ -3,11 +3,13 @@ import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Product.css";
+import { useMyContext } from "../../context/searchContext";
 
 export default function Product({ product, ciblingProduct }) {
   const [hover, setHover] = useState(null);
   const [rate, setRate] = useState(0);
   const [rateProduct, setRateProduct] = useState("");
+  const { tabLike, tabPurchase } = useMyContext();
 
   const handlSendReview = async (product, index, id_console) => {
     try {
@@ -35,13 +37,16 @@ export default function Product({ product, ciblingProduct }) {
   return (
     <div className="product">
       <div className="product-item">
-        <Link to={`product/${product.id_console}`} >
+        <Link to={`product/${product.id_console}`}>
           <div className="image">
             <img src={product.image} alt="Product" />
           </div>
         </Link>
         <div className="title-price">
-          <Link to={`product/${product.id_console}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link
+            to={`product/${product.id_console}`}
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
             <p className="title">{product.name}</p>
           </Link>
           <p className="price">{product.price}€</p>
@@ -65,11 +70,13 @@ export default function Product({ product, ciblingProduct }) {
                     color={index <= currentRating ? "ACACAC" : "e4e5e9"}
                     onMouseEnter={() => setHover(currentRating)}
                     onMouseLeave={() => setHover(null)}
-                    // onClick={(e) => console.log(e)}
                   />
                 </label>
               );
             })}
+          </div>
+          <div className="add-pannier">
+            <button onClick={()=> tabPurchase(product)}>Ajouter au pannier</button>
           </div>
         </div>
       </div>
