@@ -10,18 +10,25 @@ export const MyProvider = ({ children }) => {
   const [purchases, setPurchases] = useState([]);
   const [nbPurchases, setNbPurchases] = useState(0);
 
-
-  const tabPurchase = (product) => {
-    const count = purchases.filter((item) => item.id_console === product.id_console).length;
+  const tabPurchase = (purchase) => {
+    const count = purchases.filter(
+      (item) => item.id_console === purchase.id_console
+    ).length;
     if (count < 2) {
       setNbPurchases(nbPurchases + 1);
-      setPurchases([...purchases,product]);
+      setPurchases([...purchases, purchase]);
       console.log("addition au prix finale");
     } else {
       alert("Vous ne pouvez pas acheter ce produit plus de deux fois !");
       console.log(purchases);
     }
   };
+
+  useEffect(() => {
+    if (purchases.length > 0) {
+      console.log(purchases);
+    }
+  }, [purchases]);
 
   const filterData = products?.filter((produit) => {
     const matchSearch = produit.name
@@ -37,7 +44,8 @@ export const MyProvider = ({ children }) => {
     products,
     setProducts,
     nbPurchases,
-    tabPurchase
+    tabPurchase,
+    purchases,
   };
 
   return (

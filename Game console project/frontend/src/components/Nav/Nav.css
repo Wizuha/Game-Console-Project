@@ -54,21 +54,29 @@
 
 .right {
   display: flex;
-  gap: 29px;
+  gap: 20px;
   padding: 0 20px;
   font-family: "Poppins Regular";
   font-size: 16px;
 }
 
+.right button{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .cart {
   display: flex;
-  gap: 10px;
   align-items: center;
+  flex-direction: row;
 }
 
 .like {
   display: flex;
-  gap: 10px;
   align-items: center;
 }
 
@@ -79,14 +87,15 @@
 }
 
 .liste span{
-  font-size: 12px;
+  font-size: 10px;
   background-color: #EDA415;
-  width: 17px;
-  height: 17px;
+  width: 13px;
+  height: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  color: white;
   font-family: "Poppins Regular";
 }
 

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useMyContext } from "../../context/searchContext";
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 export default function Nav() {
   const [view, setView] = useState(false);
-  const { filterData, search, setSearch, nbLikes, nbPurchases } = useMyContext();
+  const { filterData, search, setSearch, nbLikes, nbPurchases } =
+    useMyContext();
 
   return (
     <nav className="nav">
@@ -28,15 +30,24 @@ export default function Nav() {
         <div className="right">
           <div className="cart">
             <div className="liste">
-              <img src="/shopping-cart.svg" />
-              <span>{ nbPurchases }</span>
+              <Link
+                to={`/achats`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <button>
+                  <img src="/shopping-cart.svg" />
+                  <span>{nbPurchases}</span>
+                </button>
+              </Link>
             </div>
             <p>Cart</p>
           </div>
           <div className="like">
             <div className="liste">
-              <img src="/heart.svg" />
-              <span>0</span>
+              <button>
+                <img src="/heart.svg" />
+                <span>0</span>
+              </button>
             </div>
             <p>Like</p>
           </div>

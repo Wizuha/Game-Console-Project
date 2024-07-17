@@ -76,7 +76,9 @@ export default function Product({ product, ciblingProduct }) {
             })}
           </div>
           <div className="add-pannier">
-            <button onClick={()=> tabPurchase(product)}>Ajouter au pannier</button>
+            <button onClick={() => tabPurchase(product)}>
+              Ajouter au pannier
+            </button>
           </div>
         </div>
       </div>
