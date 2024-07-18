@@ -1,0 +1,25 @@
+td{
+  text-align: left;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 21%;
+}
+
+.name-purchase {
+  font-family: "Poppins SemiBold";
+  color: #003f62;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins Medium";
+  gap: 10px;
+}

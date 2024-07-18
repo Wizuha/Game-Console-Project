@@ -1,0 +1,29 @@
+.purchase-content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.purchase-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.purchase-table th{
+  padding: 12px 15px;
+  text-align: left;
+  font-family: "Poppins Medium";
+}
+
+.purchase-table th {
+  background-color: #E2F4FF;
+  color: black;
+}
+
+.purchase-table tbody{
+    padding: 60px 0;
+    border-bottom: solid 1px #C3C3C3;
+}

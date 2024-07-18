@@ -2,21 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaCheck } from "react-icons/fa6";
 import "./ProductDetails.css";
+import { useMyContext } from "../../context/searchContext";
 
 export default function ProductDetails() {
   const { id_console } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [quantity, setQuantity] = useState(1);
-
-  const handleIncrease = () => {
-    setQuantity((quantity) => quantity + 1);
-  };
-
-  const handleDecrease = () => {
-    setQuantity(quantity > 1 ? quantity - 1 : 1);
-  };
+  const { handleIncrease,handleDecrease,quantity} = useMyContext();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -77,7 +70,7 @@ export default function ProductDetails() {
                 <input type="radio" id="1" name="color" value="green" checked />
               </div>
               <div className="color-black">
-                <input type="radio" id="2" name="color" value="black"/>
+                <input type="radio" id="2" name="color" value="black" />
               </div>
             </div>
           </div>
@@ -85,9 +78,9 @@ export default function ProductDetails() {
         <div className="quantity-details">
           <h2>Quantity :</h2>
           <div className="console-number">
-            <button onClick={handleIncrease}>+</button>
+            <button onClick={ () => handleDecrease(product)}>-</button>
             <p>{quantity}</p>
-            <button onClick={handleDecrease}>-</button>
+            <button onClick={ () => handleIncrease(product)}>+</button>
           </div>
         </div>
         <div className="card-buy">
