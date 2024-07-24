@@ -1,4 +1,6 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SearchContext = createContext();
 
@@ -11,33 +13,36 @@ export const MyProvider = ({ children }) => {
   const [nbPurchases, setNbPurchases] = useState(0);
   const [quantity, setQuantity] = useState(0);
 
+
   const handleIncrease = (purchase) => {
-    const number = purchases.filter((item) => item.id_console === purchase.id_console).length;
-    if(number <= 2 && number > 0 && quantity < 2 ) {
-      setQuantity((quantity) => quantity + 1);
-      setNbPurchases(nbPurchases + 1);
-    }
-    else if(number === 0 && quantity <= 2 ){
-        setPurchases([...purchases,purchase]);
-        setQuantity((quantity) => quantity + 1);
+    const existingPurchase = purchases.find((item) => item.id_console === purchase.id_console);
+    if (existingPurchase){
+      if (existingPurchase.quantity < 2) {
+        setPurchases(
+          purchases.map((item) => item.id_console === purchase.id_console
+            ? { ...item, quantity: item.quantity + 1 }
+            : item));
         setNbPurchases(nbPurchases + 1);
-    }
-    else{
-      alert("Le produit ne peut pas être ajouté plus de 2 fois.");
+      } else{
+          toast.error("Le produit ne peut pas être ajouté plus de 2 fois.");
+      }
+    }else{
+      setPurchases([...purchases,{ ...purchase, quantity: 1 }])
+      setNbPurchases(nbPurchases + 1);
     }
   };
 
   const handleDecrease = (purchase) => {
-    const number = purchases.filter((item) => item.id_console === purchase.id_console).length;
-    if(number == 2){
-      setQuantity(quantity - 1);
+    if(purchase.quantity > 1){
+      setPurchases(
+        purchases.map((item) => item.id_console === purchase.id_console
+          ? {...item, quantity : item.quantity - 1}
+          : item));
       setNbPurchases(nbPurchases - 1);
+    }else{
+      setPurchases(purchases.filter((item) => item.id_console !== purchase.id_console));
+      setNbPurchases(nbPurchases < 1 ? 0 : nbPurchases - 1 )
     }
-    else if(number == 1)
-    setQuantity(quantity > 1 ? quantity - 1 : 0);
-    setPurchases(purchases.filter((item)=> item.id_console !== purchase.id_console ));
-    setNbPurchases(nbPurchases - 1);
-
   };
 
   const deletePurchase = (purchase) => {
@@ -45,21 +50,6 @@ export const MyProvider = ({ children }) => {
       purchases.filter((item) => item.id_console !== purchase.id_console)
     );
     setNbPurchases(nbPurchases - 1);
-  };
-
-  const tabPurchase = (purchase) => {
-    const count = purchases.filter(
-      (item) => item.id_console === purchase.id_console
-    ).length;
-    if (count < 2) {
-      setNbPurchases(nbPurchases + 1);
-      setPurchases([...purchases, purchase]);
-      setQuantity(quantity + 1);
-      console.log("addition au prix finale");
-    } else {
-      alert("Vous ne pouvez pas acheter ce produit plus de deux fois !");
-      console.log(purchases);
-    }
   };
 
   useEffect(() => {
@@ -75,6 +65,8 @@ export const MyProvider = ({ children }) => {
     return matchSearch;
   });
 
+
+
   const contextValue = {
     filterData,
     search,
@@ -82,12 +74,12 @@ export const MyProvider = ({ children }) => {
     products,
     setProducts,
     nbPurchases,
-    tabPurchase,
     purchases,
     deletePurchase,
     handleIncrease,
     handleDecrease,
     quantity,
+    purchases
   };
 
   return (

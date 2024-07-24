@@ -9,7 +9,7 @@ export default function Product({ product, ciblingProduct }) {
   const [hover, setHover] = useState(null);
   const [rate, setRate] = useState(0);
   const [rateProduct, setRateProduct] = useState("");
-  const { tabLike, tabPurchase } = useMyContext();
+  const { tabLike, handleIncrease } = useMyContext();
 
   const handlSendReview = async (product, index, id_console) => {
     try {
@@ -76,7 +76,7 @@ export default function Product({ product, ciblingProduct }) {
             })}
           </div>
           <div className="add-pannier">
-            <button onClick={() => tabPurchase(product)}>
+            <button onClick={() => handleIncrease(product)}>
               Ajouter au pannier
             </button>
           </div>

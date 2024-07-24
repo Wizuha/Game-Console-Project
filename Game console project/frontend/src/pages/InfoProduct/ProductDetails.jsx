@@ -3,13 +3,16 @@ import { useParams } from "react-router-dom";
 import { FaCheck } from "react-icons/fa6";
 import "./ProductDetails.css";
 import { useMyContext } from "../../context/searchContext";
+import Purchases from "../Purchases/Purchases";
 
 export default function ProductDetails() {
   const { id_console } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { handleIncrease,handleDecrease,quantity} = useMyContext();
+  const { handleIncrease, handleDecrease, quantity, purchases } = useMyContext();
+
+
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -77,12 +80,17 @@ export default function ProductDetails() {
         </fieldset>
         <div className="quantity-details">
           <h2>Quantity :</h2>
-          <div className="console-number">
-            <button onClick={ () => handleDecrease(product)}>-</button>
-            <p>{quantity}</p>
-            <button onClick={ () => handleIncrease(product)}>+</button>
+            {purchases.map((purchase) => {
+              const currentPurchase = purchases.find((purchase) => purchase.id_console === product.id_console);
+              return(
+                <div className="console-number" key = {purchase.id_console}>
+                <button onClick={() => handleDecrease(purchase)}>-</button>
+                  <p>{currentPurchase ? currentPurchase.quantity : 0}</p>
+                <button onClick={() => handleIncrease(purchase)}>+</button>
+                </div>
+              );
+              })}
           </div>
-        </div>
         <div className="card-buy">
           <button>Add to card</button>
           <button>Buy it now</button>
