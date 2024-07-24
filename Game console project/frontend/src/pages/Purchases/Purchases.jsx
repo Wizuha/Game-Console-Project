@@ -22,7 +22,6 @@ export default function Purchases() {
               {purchases.map((purchase) => (
                 <TabPurchase purchase={purchase} key={purchase.id_console} />                
               ))}
-
           </tbody>
         </table>
       </div>

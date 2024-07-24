@@ -1,11 +1,11 @@
 .purchase-content {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
 
 .purchase-table table {
-  width: 100%;
+  width: 60%;
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 18px;

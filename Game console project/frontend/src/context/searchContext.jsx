@@ -20,14 +20,14 @@ export const MyProvider = ({ children }) => {
       if (existingPurchase.quantity < 2) {
         setPurchases(
           purchases.map((item) => item.id_console === purchase.id_console
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + 1 , subtotal: 2 * item.price }
             : item));
         setNbPurchases(nbPurchases + 1);
       } else{
           toast.error("Le produit ne peut pas être ajouté plus de 2 fois.");
       }
     }else{
-      setPurchases([...purchases,{ ...purchase, quantity: 1 }])
+      setPurchases([...purchases,{ ...purchase, quantity: 1, subtotal: purchase.price }])
       setNbPurchases(nbPurchases + 1);
     }
   };
@@ -35,9 +35,12 @@ export const MyProvider = ({ children }) => {
   const handleDecrease = (purchase) => {
     if(purchase.quantity > 1){
       setPurchases(
-        purchases.map((item) => item.id_console === purchase.id_console
-          ? {...item, quantity : item.quantity - 1}
-          : item));
+        purchases.map((item) =>
+          item.id_console === purchase.id_console
+            ? { ...item, quantity: item.quantity - 1, subtotal: item.subtotal - item.price }
+            : item
+        )
+      );
       setNbPurchases(nbPurchases - 1);
     }else{
       setPurchases(purchases.filter((item) => item.id_console !== purchase.id_console));
