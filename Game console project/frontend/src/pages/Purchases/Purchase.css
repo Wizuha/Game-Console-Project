@@ -1,29 +1,136 @@
 .purchase-content {
   width: 100%;
-  margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.purchase-table {
+  width: 70%;
 }
 
 .purchase-table table {
-  width: 60%;
+  width: 90%;
   border-collapse: collapse;
-  margin: 20px 0;
   font-size: 18px;
   text-align: left;
 }
 
-.purchase-table th{
+.purchase-table th {
   padding: 12px 15px;
   text-align: left;
   font-family: "Poppins Medium";
 }
 
 .purchase-table th {
-  background-color: #E2F4FF;
+  background-color: #e2f4ff;
   color: black;
 }
 
-.purchase-table tbody{
-    padding: 60px 0;
-    border-bottom: solid 1px #C3C3C3;
+.purchase-table tbody {
+  padding: 60px 0;
+  border-bottom: solid 1px #c3c3c3;
+}
+
+.card-total {
+  width: 27%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-total table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  text-align: left;
+  border: solid 1px #C3C3C3;
+}
+
+.card-total th {
+  padding: 12px 15px;
+  text-align: left;
+  font-family: "Poppins Medium";
+  display: flex;
+  justify-content: center;
+  background-color: #e2f4ff;
+  color: black;
+}
+
+.card-total td {
+  padding: 0 13px;
+}
+
+.single-column > div {
+  margin: 15px 0;
+}
+
+.subtotal-card-total {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins Medium";
+}
+
+.coupon {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  align-items: center;
+  border: 1px solid #dfdfdf;
+  border-radius: 15px;
+  padding: 3%;
+}
+
+.coupon input {
+  width: 90%;
+  border-radius: 15px;
+  border: hidden;
+  font-family: "Poppins Regular";
+}
+
+.coupon button{
+  font-family: "Poppins Medium";
+  color: #003F62;
+  font-size: 0.8em;
+  background-color: transparent;
+  border: hidden;
+  cursor: pointer;
+}
+
+.country {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.country input {
+  width: 90%;
+  padding: 3%;
+  border: 1px solid #dfdfdf;
+  border-radius: 15px;
+  font-family: "Poppins Regular";
+}
+
+.proced-checkout{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.proced-checkout button{
+  width: 70%;
+  padding: 3%;
+  font-family: "Poppins SemiBold";
+  color: #FFF;
+  background-color: #EDA415;
+  border: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.proced-checkout button:hover{
+  background-color: #FFF;
+  color: #EDA415;
+  border: 1px solid #EDA415;
 }

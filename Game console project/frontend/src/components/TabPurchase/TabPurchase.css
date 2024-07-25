@@ -4,6 +4,11 @@ td{
   text-align: left;
 }
 
+.name-purchase {
+  font-family: "Poppins SemiBold";
+  color: #003f62;
+}
+
 .body {
   display: flex;
   width: 100%;
@@ -12,10 +17,7 @@ td{
   gap: 21%;
 }
 
-.name-purchase {
-  font-family: "Poppins SemiBold";
-  color: #003f62;
-}
+
 
 .quantity {
   display: flex;
