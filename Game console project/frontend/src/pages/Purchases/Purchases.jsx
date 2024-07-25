@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Purchase.css";
 import { useMyContext } from "../../context/searchContext";
 import TabPurchase from "../../components/TabPurchase/TabPurchase";
 
 export default function Purchases() {
   const { purchases } = useMyContext();
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    const total = purchases.reduce((sum,purchase)=> sum + purchase.subtotal,0);
+    setTotalPrice(total);
+  },[purchases])
+
   return (
     <div className="purchase-content">
       <div className="purchase-table">
@@ -37,7 +44,7 @@ export default function Purchases() {
               <td className="single-column">
                 <div className="subtotal-card-total">
                   <h2>Subtotal</h2>
-                  <p>$200</p>
+                  <p>{totalPrice}$</p>
                 </div>
                 <div className="line"></div>
                 <div className="coupon">
