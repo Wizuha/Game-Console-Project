@@ -17,11 +17,19 @@
 
 .left {
   display: flex;
-  font-family: "FiraCode Bold";
-  font-size: 20px;
   padding: 0 20px;
-  justify-content: center;
+}
+
+.left button{
+  display: flex;
+  font-family: "FiraCode Bold";
+  background-color: transparent;
+  border: hidden;
+  font-size: 20px;
   gap: 10px;
+  justify-content: center;
+  color: white;
+  align-items: center;
 }
 
 .input-button {

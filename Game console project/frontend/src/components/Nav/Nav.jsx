@@ -12,8 +12,12 @@ export default function Nav() {
     <nav className="nav">
       <div className="content">
         <div className="left">
-          <img src="/Union.svg" />
-          <p>Game Center</p>
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <button>
+              <img src="/Union.svg" />
+              <p>Game Center</p>
+            </button>
+          </Link>
         </div>
         <div className="input-button">
           <input
